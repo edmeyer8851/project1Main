@@ -1,0 +1,121 @@
+{
+    "serialKillers": [
+      {
+        "id": 1,
+        "name": "Luis Garavito",
+        "country": ["Colombia", "Ecuador", "Venezuela"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Luis_Alfredo_Garavito_Cubillos.jpg/220px-Luis_Alfredo_Garavito_Cubillos.jpg",
+        "yearsActive": "1992 to 1999",
+        "numberVictims": 138,
+        "description": "Child-murderer, torture-killer, and rapist known as 'La Bestia' ('The Beast'). Confessed to killing 140 boys between eight and 16 years old over a seven-year period in Colombia and neighboring countries. He is suspected of murdering over 300 victims, mostly street children. Garavito was originally sentenced to 1,853 years in prison, but this was later reduced to 22 years after he led police to many of the bodies of his victims. He is scheduled to become eligible for parole in 2023."
+      },
+      {
+        "id": 2,
+        "name": "Pedro López",
+        "country": ["Colombia", "Peru", "Ecuador"],
+        "image": "https://www.biography.com/.image/t_share/MTE5NTU2MzE2NDgzMDYxMjU5/pedro-alonso-lopez-12103226-1-402.jpg",
+        "yearsActive": "1969 to 1979",
+        "numberVictims": 110,
+        "description": "Child-murderer and rapist, known as 'The Monster of the Andes'. Targeted young girls, between the ages of eight and 12. Arrested in 1980 and convicted in 1983 of killing three young girls, but claimed to have killed hundreds. Despite being believed to be one of the most prolific serial killers of the twentieth century, he was released in the late 1990s."
+      },
+      {
+        "id": 3,
+        "name": "Javed Iqbal",
+        "country": ["Pakistan"],
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/39/Javed_Iqbal.jpg",
+        "yearsActive": "1998 to 1999",
+        "numberVictims": 100,
+        "description": "Child-murderer and rapist, known as 'Kukri', Iqbal murdered 100 street children by strangling them and covering up his crimes by dissolving the bodies with acid. He was arrested in 1999 thanks to a letter he sent to a newspaper, and was set to be executed in the manner described by the judge who stated, 'You will be strangled to death in front of the parents whose children you killed, Your body will then be cut into 100 pieces and put in acid, the same way you killed the children. However, he died in custody before he could be executed."
+      },
+      {
+        "id": 4,
+        "name": "Mikhail Popkov",
+        "country": ["Russia"],
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Mikhail_Popkov.jpeg/240px-Mikhail_Popkov.jpeg",
+        "yearsActive": "1992 to 2010",
+        "numberVictims": 83,
+        "description": "Serial rapist-killer nicknamed 'The Werewolf', who was active for two decades in Angarsk, Irkutsk and Vladivostok. After being convicted of 22 murders in 2015, he confessed to an additional 59 murders, of which he was convicted of 56 in 2018. In July 2020, Popkov confessed to more killings, bringing the total number of admitted victims to 83. Sentenced to life."
+      },
+      {
+        "id": 5,
+        "name": "Daniel Camargo Barbosa",
+        "country": ["Colombia", "Ecuador", "Brazil"],
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/DanielCBarbosa.jpg/220px-DanielCBarbosa.jpg",
+        "yearsActive": "1974 to 1986",
+        "numberVictims": 72,
+        "description": "Child and woman murderer, believed to have possibly raped and killed over 150 victims, primarily targeting female children as they were more likely to be virgins. Confessed to killing 72 victims. He strangled young girls in Colombia and was arrested, but he escaped from prison and he started killing in Ecuador; rearrested in 1986, he was incarcerated in the same Ecuadorian prison as 300+ serial killer Pedro López. Camargo was killed in jail by the nephew of one of his victims."
+      },
+      {
+        "id": 6,
+        "name": "Pedro Rodrigues Filho",
+        "country": ["Brazil"],
+        "image": "https://i2-prod.dailystar.co.uk/incoming/article24220053.ece/ALTERNATES/s810/3_PAY-Newsflash-ChewBra-01.jpg",
+        "yearsActive": "1967 to 2003",
+        "numberVictims": 71,
+        "description": "He claimed to have killed over 100 victims, 47 of them inmates. He also killed his father and ate a piece of his heart. He killed his first two victims at the age of 14; he was first arrested in 1973. Convicted and sentenced to 128 years, but the maximum one can serve in Brazil is 30 years. Was released in 2018."
+      },
+      {
+        "id": 7,
+        "name": "Kampatimar Shankariya",
+        "country": ["India"],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTecpCCJAJ-MvuEvdW9HoZvHHRyBmV4QFE39Okz7p5L0PL6BJMDtNQ0s1pMcG-mzbeOh5A&usqp=CAU",
+        "yearsActive": "1977 to 1978",
+        "numberVictims": 70,
+        "description": "Indian serial killer who used a hammer to kill over 70 men and women between 1978 and 1979. Was hanged in 1979, his last words were, 'I have murdered in vain', he declared. 'Nobody should become like me.'."
+      },
+      {
+        "id": 8,
+        "name": "Yang Xinhai",
+        "country": ["China"],
+        "image": "https://murderpedia.org/male.X/images/xinhai_yang/xinhai000.jpg",
+        "yearsActive": "2000 to 2003",
+        "numberVictims": 67,
+        "description": "Known as the 'Monster Killer'. Would enter victims' homes at night and kill using axes, meat cleavers, hammers, and shovels. Executed by gunshot in 2004."
+      },
+      {
+        "id": 9,
+        "name": "Samuel Little",
+        "country": ["United States"],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Samuel_Little.webp/220px-Samuel_Little.webp.png",
+        "yearsActive": "1970 to 2005",
+        "numberVictims": 60,
+        "description": "Was convicted of killing three women, but later investigations linked 31 other murders to him. Little is now thought to be America's most prolific serial killer. He claimed he killed as many as 93 victims total, three above his initial confession of 90, the FBI later confirmed a total of 50 murders linked to Little. The investigations into his crimes are ongoing."
+      },
+      {
+        "id": 10,
+        "name": "Giuseppe Greco",
+        "country": ["Italy"],
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/1d/Pinogreco.jpg",
+        "yearsActive": "1981 to 1983",
+        "numberVictims": 58,
+        "description": "During the Second Mafia War, from 1981 to 1983 committed dozens of murders, often with his favorite weapon, an AK-47. He was eventually convicted in absentia of 58 murders, but it is believed that he committed at least 80 murders and possibly as many as 300. Murdered in his home in 1985."
+      },
+      {
+        "id": 11,
+        "name": "Andrei Chikatilo",
+        "country": ["Soviet Union"],
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/59/Chikatilo-mugshot.jpg",
+        "yearsActive": "1978 to 1990",
+        "numberVictims": 53,
+        "description": "Known as 'The Butcher of Rostov', 'The Red Ripper' or 'The Rostov Ripper'. Convicted of the murder of 53 women and children between 1978 and 1990. One man was previously convicted and executed for his first murder. Executed by gunshot in 1994."
+      },
+      {
+        "id": 12,
+        "name": "Anatoly Onoprienko",
+        "country": ["Soviet Union", "Ukraine"],
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Anatoly_Onoprienko_mugshot.jpg/220px-Anatoly_Onoprienko_mugshot.jpg",
+        "yearsActive": "1989 to 1996",
+        "numberVictims": 52,
+        "description": "Known as 'The Beast of Ukraine', 'The Terminator' and 'Citizen O'. Convicted of the murders of nine people in 1989 and 43 people in 1995-1996. Traveled throughout Europe illegally from 1990 to 1995; whether he killed during this time is unknown. Sentenced to death, later commuted to imprisonment for life. Died from heart failure in 2013."
+      },
+      {
+        "id": 13,
+        "name": "Ivan Maleshoff",
+        "country": ["Soviet Union"],
+        "image": "https://murderpedia.org/male.M/images/milat_ivan/milat_ivan.jpg",
+        "yearsActive": "1934 to 1935",
+        "numberVictims": 50,
+        "description": "Known as, 'Bluebeard of Kharkiv'; Ivan Stepanovich Maleshoff was an electrical engineer and prolific albeit little known Soviet serial killer. He is purported to have killed 20 women in Kharkiv over a period of several months in 1935 with a knife, leaving behind little clues as to his identity other than taunting letters to police. Reportedly, apprehended by authorities as he attempted to kill his next victim, completely unaware he had been tailed after seen fleeing arrest by an undercover female officer earlier in the day. Prior to his execution, he confessed to an additional 30 murders in nearby Kyiv in 1934. Was convicted and executed in 1935 by firing squad at the age of 40."
+      }
+    ]
+  }
