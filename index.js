@@ -25,8 +25,29 @@ function displayDetails(e) {
             // 
             let country = document.createElement('h1') 
 
-        })
-    
-    
 
+
+
+            // dislike button
+            let dislikeButton = document.createElement('button')
+            dislikeButton.textContent = 'Dislike'
+            dislikeButton.id = killer.id
+            dislikeButton.addEventListener('click', dislikeKiller)
+            detailsContainer.appendChild(dislikeButton)
+        })
+}
+
+function dislikeKiller(e){
+    //make sure to update this depending on how wendy creates the dislike element
+    numberOfDislikes = parseInt(e.target.parentNode.querySelector('p').textContent) + 1
+    fetch(`http://localhost:3000/serialKillers/${e.target.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            dislikes: numberOfDislikes
+        })
+    })
 }
