@@ -2,7 +2,25 @@ body {
     background-color: black;
 }
 
-img {
-    width: 100px;
-    height: 100px;
+#menu-bar img {
+    height: 6rem;
+    width: auto;
+    padding-right: 1rem;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+#menu-header {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-bar {
+    display: flex;
+    justify-content: center;
+    height: 7rem;
+    padding: 2rem;
 }
