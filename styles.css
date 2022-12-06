@@ -6,22 +6,38 @@ body {
     height: 6rem;
     width: auto;
     padding-right: 1rem;
+    filter: drop-shadow(0 0 1em #c93642)
+}
+
+#detail-container {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 #menu-bar img:hover {
     transform: scale(1.2);
 }
 
-#detail img {
+#detail-image {
     height: 20rem;
     width: auto;
-    margin: auto;
+    margin: 20px;
+    justify-content: center;
+    filter: drop-shadow(0 0 1em #c93642)
 }
 
 h1 {
     color: white;
-    text-align: center;
+    text-align: left;
     font-size: large;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-size: larger;
 }
 
 #menu-header {
@@ -47,9 +63,8 @@ button {
 #detail {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
 }
-
 
 button {
     background-color: rgb(232, 56, 56);
@@ -59,16 +74,10 @@ button {
     font-size: larger;
 }
 
-#details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 p {
     color: white;
-    width: 750px;
-    text-align: center;
+    width: 500px;
+    text-align: left;
     margin: auto;
     padding-bottom: 1rem;
 }
