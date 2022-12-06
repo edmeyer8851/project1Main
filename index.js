@@ -17,34 +17,54 @@ function displayDetails(e) {
     fetch(`http://localhost:3000/serialKillers/${e.target.id}`) 
         .then(response => response.json()) 
         .then(killer => {
-            // name 
-            detailsContainer.innerHTML = ''
-            let name = document.createElement('h1')
+            // name
+            detailsContainer.innerHTML = ``
+            let name = document.createElement(`h1`)
             name.textContent = killer.name
             detailsContainer.appendChild(name)
-            // countries active // 
-            let countryLabel = document.createElement('h1')
-            countryLabel.textContent = `Country: `
-            let country = document.createElement('h1') 
+            // countries active //
+            let country = document.createElement(`h1`)
             country.textContent = killer.country
             countryLabel.appendChild(country)
             detailsContainer.appendChild(countryLabel)
-            // years active // 
-            let yearsActive = document.createElement('h1')
+            // years active //
+            let yearsActive = document.createElement(`h1`)
             yearsActive.textContent = killer.yearsActive
             detailsContainer.appendChild(yearsActive)
-            // # of victims // 
-            let victims = document.createElement('h1') 
-            victims.textContent = killer.numberVictims 
+            // # of victims //
+            let victims = document.createElement(`h1`)
+            victims.textContent = killer.numberVictims
             detailsContainer.appendChild(victims)
-            // description 
-            let description = document.createElement('h1')
+            // description
+            let description = document.createElement(`h1`)
             description.textContent = killer.description
             detailsContainer.appendChild(description)
             // dislikes //
-            let dislikes = document.createElement('h1') 
+            let dislikes = document.createElement(`h1`)
             dislikes.textContent = killer.dislikes
             detailsContainer.appendChild(dislikes)
             console.log(detailsContainer)
+
+            // dislike button
+            let dislikeButton = document.createElement('button')
+            dislikeButton.textContent = 'Dislike'
+            dislikeButton.id = killer.id
+            dislikeButton.addEventListener('click', dislikeKiller)
+            detailsContainer.appendChild(dislikeButton)
         })
+}
+
+function dislikeKiller(e){
+    //make sure to update this depending on how wendy creates the dislike element
+    numberOfDislikes = parseInt(e.target.parentNode.querySelector('p').textContent) + 1
+    fetch(`http://localhost:3000/serialKillers/${e.target.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            dislikes: numberOfDislikes
+        })
+    })
 }

@@ -38,3 +38,18 @@ button {
     flex-direction: column;
     justify-content: center;
 }
+
+
+button {
+    background-color: rgb(232, 56, 56);
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    font-size: larger;
+}
+
+#details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
