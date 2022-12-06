@@ -22,19 +22,25 @@ function displayDetails(e) {
             let name = document.createElement(`h1`)
             name.textContent = killer.name
             detailsContainer.appendChild(name)
-            // countries active //
+            //countries active 
             let country = document.createElement(`h1`)
             country.textContent = killer.country
-            countryLabel.appendChild(country)
             detailsContainer.appendChild(countryLabel)
+            //const countriesActive = document.querySelector('#countriesActive')
+            //countriesActive.textContent = killer.country
+
             // years active //
             let yearsActive = document.createElement(`h1`)
             yearsActive.textContent = killer.yearsActive
             detailsContainer.appendChild(yearsActive)
+            //const yearsActive = document.querySelector('#yearsActive')
+            //yearsActive.textContent = killer.yearsActive
             // # of victims //
             let victims = document.createElement(`h1`)
             victims.textContent = killer.numberVictims
             detailsContainer.appendChild(victims)
+            //const victims = document.querySelector('#victims')
+            //victims.textContent = killer.numberVictims
             // description
             let description = document.createElement(`h1`)
             description.textContent = killer.description
@@ -44,7 +50,6 @@ function displayDetails(e) {
             dislikes.textContent = killer.dislikes
             detailsContainer.appendChild(dislikes)
             console.log(detailsContainer)
-
             // dislike button
             let dislikeButton = document.createElement('button')
             dislikeButton.textContent = 'Dislike'

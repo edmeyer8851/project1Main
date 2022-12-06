@@ -14,10 +14,29 @@
         <h1>Most Prolific Serial Killers</h1>
         <div id="menu-bar">
         </div>
+    <div id="detail">
+        <h1 id='name'>Name</h1>
+        <h1>Countries Active: <span id='countriesActive'></span></span></h1>
+        <h1>Years Active: <span id='yearsActive'></span></span></h1>
+        <h1>Number of Victims: <span id='victims'></span></span></h1>
+        <h1 id="description">Description</h1>
     </div>
-    
-    <div id="details">
 
-    </div>
+    <form id="new-ramen">
+        <h4>Add New Ramen</h4>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="new-name" />
+        <label for="restaurant">Restaurant: </label>
+        <input type="text" name="restaurant" id="new-restaurant" />
+        <label for="image">Image: </label>
+        <input type="text" name="image" id="new-image" />
+        <label for="rating">Rating: </label>
+        <input type="number" name="rating" id="new-rating" />
+        <label for="new-comment">Comment: </label>
+        <textarea name="new-comment" id="new-comment"></textarea>
+        <input type="submit" value="Create" />
+      </form>
+
 </body>
 </html>
+
