@@ -1,55 +1,85 @@
 const imagesContainer = document.getElementById('menu-bar')
-const detailsContainer = document.getElementById('details') 
+const detailsContainer = document.getElementById('detail') 
+const yearsActive = document.querySelector('#yearsActive')
+const victimCount = document.querySelector('#victims')
+const description = document.querySelector('#description')
+let currentKillerDislikes;
+let currentKillerId;
+
 
 fetch('http://localhost:3000/serialKillers')
  .then(response => response.json())
  .then(killers => {
     killers.forEach(killer => {
         let img = document.createElement('img')
-        img.addEventListener('click', displayDetails)
+        img.addEventListener('click', e => {
+            let currentId = e.target.id
+            currentKillerId = e.target.id
+            displayDetails(currentId)
+        })
         img.src = killer.image
         img.id = killer.id
         imagesContainer.appendChild(img)
     })
+    displayDetails(killers[0].id)
+    currentKillerId = killers[0].id
  })
 
-function displayDetails(e) { 
-    fetch(`http://localhost:3000/serialKillers/${e.target.id}`) 
+function displayDetails(id) { 
+    fetch(`http://localhost:3000/serialKillers/${id}`) 
         .then(response => response.json()) 
         .then(killer => {
             // name
             detailsContainer.innerHTML = ``
             let name = document.createElement(`h1`)
+            name.id = "killerName"
             name.textContent = killer.name
             detailsContainer.appendChild(name)
-            //countries active 
-            let country = document.createElement(`h1`)
-            country.textContent = killer.country
-            detailsContainer.appendChild(countryLabel)
-            //const countriesActive = document.querySelector('#countriesActive')
-            //countriesActive.textContent = killer.country
 
-            // years active //
-            let yearsActive = document.createElement(`h1`)
-            yearsActive.textContent = killer.yearsActive
+            let detailImage = document.createElement('img')
+            detailImage.id = "detailImage"
+            detailImage.src = killer.image
+            detailsContainer.appendChild(detailImage)
+
+            // counties active
+            let countriesActive = document.createElement(`h1`)
+            countriesActive.id = "countriesActive"
+            let countriesString
+            killer.country.forEach(country => {
+                if (country === killer.country[0]){
+                    countriesString = country
+                } else{
+                    countriesString = countriesString + `, ${country}`
+                }
+            })
+            countriesActive.textContent = `Countries Active: ${countriesString}`
+            detailsContainer.appendChild(countriesActive)
+
+            // vitcim count
+            let victimCount = document.createElement('h1')
+            victimCount.id = "victimCount"
+            victimCount.textContent = `Victim Count: ${killer.numberVictims}`
+            detailsContainer.appendChild(victimCount)
+
+            // years active
+            let yearsActive = document.createElement('h1')
+            yearsActive.id = "yearsActive"
+            yearsActive.textContent = `Years Active: ${killer.yearsActive}`
             detailsContainer.appendChild(yearsActive)
-            //const yearsActive = document.querySelector('#yearsActive')
-            //yearsActive.textContent = killer.yearsActive
-            // # of victims //
-            let victims = document.createElement(`h1`)
-            victims.textContent = killer.numberVictims
-            detailsContainer.appendChild(victims)
-            //const victims = document.querySelector('#victims')
-            //victims.textContent = killer.numberVictims
+
             // description
-            let description = document.createElement(`h1`)
-            description.textContent = killer.description
+            let description = document.createElement('p')
+            description.id = "description"
+            description.textContent = `${killer.description}`
             detailsContainer.appendChild(description)
-            // dislikes //
-            let dislikes = document.createElement(`h1`)
-            dislikes.textContent = killer.dislikes
+
+            // number of dislikes
+            let dislikes = document.createElement('h1')
+            dislikes.id = "dislikes"
+            dislikes.textContent = `${killer.dislikes}`
+            currentKillerDislikes = killer.dislikes
             detailsContainer.appendChild(dislikes)
-            console.log(detailsContainer)
+            
             // dislike button
             let dislikeButton = document.createElement('button')
             dislikeButton.textContent = 'Dislike'
@@ -69,7 +99,8 @@ function dislikeKiller(e){
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-            dislikes: numberOfDislikes
+            dislikes: currentKillerDislikes + 1
         })
     })
+    displayDetails(currentKillerId)
 }
