@@ -8,9 +8,16 @@ body {
     padding-right: 1rem;
 }
 
+#detail img {
+    height: 20rem;
+    width: auto;
+    margin: auto;
+}
+
 h1 {
     color: white;
     text-align: center;
+    font-size: large;
 }
 
 #menu-header {
@@ -33,7 +40,7 @@ button {
     font-size: larger;
 }
 
-#details {
+#detail {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,4 +59,12 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+p {
+    color: white;
+    width: 750px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1rem;
 }
