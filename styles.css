@@ -81,3 +81,30 @@ p {
     margin: auto;
     padding-bottom: 1rem;
 }
+
+#formContainer {
+    margin-left: 100px;
+}
+
+input[type="text"] {
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border:2px solid rgb(232, 56, 56)
+}
+
+input[type="submit"] {
+    background-color: rgb(232, 56, 56);
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    font-size: larger;
+}
+
+input.descriptionText {
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border:2px solid rgb(232, 56, 56);
+    height: 60px;
+    width: 250px;
+}

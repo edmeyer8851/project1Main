@@ -3,6 +3,13 @@ const detailsContainer = document.getElementById('detail')
 const yearsActive = document.querySelector('#yearsActive')
 const victimCount = document.querySelector('#victims')
 const description = document.querySelector('#description')
+const addForm = document.querySelector('form.addKillerForm')
+addForm.addEventListener('submit', e => {
+    e.preventDefault()
+    addKiller(e)
+    addForm.reset()
+})
+
 let detailImage = document.getElementById("detail-image")
 let currentKillerDislikes;
 let currentKillerId;
@@ -125,5 +132,46 @@ function deleteKiller(id) {
     })
     .then( res => {
         location.reload()
+    })
+}
+
+function addKiller(e){
+    let name = e.target.name.value
+    let countries = e.target.countriesActive.value
+    let imageUrl = e.target.image.value
+    let victims = e.target.victimCount.value
+    let yearsActive = e.target.yearsActive.value
+    let description = e.target.description.value
+
+    let countriesArray = countries.split(", ")
+
+    fetch(`http://localhost:3000/serialKillers`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            name: name,
+            country: countriesArray,
+            image: imageUrl,
+            yearsActive: yearsActive,
+            numberVictims: Number.parseInt(victims),
+            description: description,
+            dislikes: 0
+        })
+    })
+    .then(res => res.json())
+    .then(killer => {
+        let img = document.createElement('img')
+        img.addEventListener('click', e => {
+            let currentId = e.target.id
+            currentKillerId = e.target.id
+            displayDetails(currentId)
+        })
+        img.src = killer.image
+        img.id = killer.id
+        img.title = killer.name
+        imagesContainer.appendChild(img)
     })
 }
