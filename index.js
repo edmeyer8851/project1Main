@@ -19,6 +19,7 @@ fetch('http://localhost:3000/serialKillers')
         })
         img.src = killer.image
         img.id = killer.id
+        img.title = killer.name
         imagesContainer.appendChild(img)
     })
     displayDetails(killers[0].id)
@@ -41,7 +42,7 @@ function displayDetails(id) {
             detailImage.src = killer.image
             detailsContainer.appendChild(detailImage)
 
-            // counties active
+            // countries active
             let countriesActive = document.createElement(`h1`)
             countriesActive.id = "countriesActive"
             let countriesString
@@ -76,7 +77,7 @@ function displayDetails(id) {
             // number of dislikes
             let dislikes = document.createElement('h1')
             dislikes.id = "dislikes"
-            dislikes.textContent = `${killer.dislikes}`
+            dislikes.textContent = `Dislikes: ${killer.dislikes}`
             currentKillerDislikes = killer.dislikes
             detailsContainer.appendChild(dislikes)
             
@@ -86,6 +87,15 @@ function displayDetails(id) {
             dislikeButton.id = killer.id
             dislikeButton.addEventListener('click', dislikeKiller)
             detailsContainer.appendChild(dislikeButton)
+
+            // delete button
+            const deleteButton = document.createElement('button')
+            deleteButton.textContent = 'Delete'
+            deleteButton.id = 'Delete'
+            deleteButton.addEventListener('click', e => {
+                deleteKiller(currentKillerId)
+            })
+            detailsContainer.appendChild(deleteButton)
         })
 }
 
@@ -102,5 +112,17 @@ function dislikeKiller(e){
             dislikes: currentKillerDislikes + 1
         })
     })
-    displayDetails(currentKillerId)
+    .then(displayDetails(currentKillerId))
+}
+
+function deleteKiller(id) {
+    fetch(`http://localhost:3000/serialKillers/${id}`, {
+        method: 'DELETE',
+    })
+    .then( res => {
+        currentKillerId += 1
+        console.log(currentKillerId)
+        displayDetails(currentKillerId)
+        document.getElementById(id).remove()
+    })
 }

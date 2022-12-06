@@ -8,6 +8,10 @@ body {
     padding-right: 1rem;
 }
 
+#menu-bar img:hover {
+    transform: scale(1.2);
+}
+
 #detail img {
     height: 20rem;
     width: auto;
