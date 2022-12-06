@@ -3,6 +3,7 @@ const detailsContainer = document.getElementById('detail')
 const yearsActive = document.querySelector('#yearsActive')
 const victimCount = document.querySelector('#victims')
 const description = document.querySelector('#description')
+let detailImage = document.getElementById("detail-image")
 let currentKillerDislikes;
 let currentKillerId;
 
@@ -30,17 +31,17 @@ function displayDetails(id) {
     fetch(`http://localhost:3000/serialKillers/${id}`) 
         .then(response => response.json()) 
         .then(killer => {
-            // name
+            // clears out the current details
             detailsContainer.innerHTML = ``
+            detailImage.src = ""
+
+            //name
             let name = document.createElement(`h1`)
             name.id = "killerName"
             name.textContent = killer.name
             detailsContainer.appendChild(name)
-
-            let detailImage = document.createElement('img')
-            detailImage.id = "detailImage"
+            
             detailImage.src = killer.image
-            detailsContainer.appendChild(detailImage)
 
             // countries active
             let countriesActive = document.createElement(`h1`)
@@ -112,7 +113,10 @@ function dislikeKiller(e){
             dislikes: currentKillerDislikes + 1
         })
     })
-    .then(displayDetails(currentKillerId))
+    .then(res => {
+        currentKillerDislikes += 1
+        document.getElementById('dislikes').textContent = `Dislikes: ${currentKillerDislikes}`
+    })
 }
 
 function deleteKiller(id) {
@@ -120,9 +124,6 @@ function deleteKiller(id) {
         method: 'DELETE',
     })
     .then( res => {
-        currentKillerId += 1
-        console.log(currentKillerId)
-        displayDetails(currentKillerId)
-        document.getElementById(id).remove()
+        location.reload()
     })
 }
