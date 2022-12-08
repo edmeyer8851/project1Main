@@ -27,6 +27,7 @@ fetch('http://localhost:3000/serialKillers')
         })
         img.src = killer.image
         img.id = killer.id
+        img.className = "menuImgs"
         img.title = killer.name
         imagesContainer.appendChild(img)
     })
@@ -131,7 +132,10 @@ function deleteKiller(id) {
         method: 'DELETE',
     })
     .then( res => {
-        location.reload()
+        document.getElementById(id).remove()
+        remainingKillers = document.querySelectorAll('img[class="menuImgs')
+        currentKillerId = remainingKillers[0].id
+        displayDetails(currentKillerId)
     })
 }
 
